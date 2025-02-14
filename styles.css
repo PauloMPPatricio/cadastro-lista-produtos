@@ -1,0 +1,149 @@
+/* CONFIGURAÇÕES GERAIS
+ * Define um modelo de caixa consistente e remove margens e paddings padrões 
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* 
+ * Define um fundo claro e centraliza o conteúdo na tela 
+ */
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/*
+ * ESTILO DOS CONTAINERS
+ * Define o estilo padrão das seções (menu, cadastro, lista) 
+ */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* 
+ * Espaçamento inferior para títulos  
+ */
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+/*
+ * ESTILIZAÇÃO DO FORMULÁRIO
+ * Define o layout do formulário 
+ */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 
+ * Define estilo padrão para inputs, textarea, selects e botões
+ */
+input, textarea, select, button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/*
+ * ESTILO DOS BOTÕES
+ * Define o estilo padrão dos botões
+ */
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* 
+ * Efeito hover: apenas para botões habilitados
+ */
+button:not(:disabled):hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* 
+ * Efeito de clique: reduz levemente o tamanho
+ */
+button:not(:disabled):active {
+    transform: scale(0.98);
+}
+
+/*
+ * Estilo para botões desativados
+ */
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/*
+ * ESTILO DA TABELA
+ * Define layout e espaçamento da tabela
+ */
+table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+/*
+ * CLASSES AUXILIARES
+ * Esconde elementos quando necessário
+ */
+.hidden {
+    display: none;
+}
+
+/*
+ * Estilo da mensagem de feedback
+ */
+#feedbackMessage {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/*
+ * ESTILIZAÇÃO DE ERROS
+ * Define a aparência das mensagens de erro
+ */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*
+ * Adiciona borda vermelha em campos com erro
+ */
+.error-border {
+    border: 2px solid red;
+}
